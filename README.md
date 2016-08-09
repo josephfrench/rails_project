@@ -1,4 +1,4 @@
-# README
+My name is Joe French.  This is my first rails app.  
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
