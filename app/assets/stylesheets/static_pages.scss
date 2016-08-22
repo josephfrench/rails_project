@@ -1,3 +1,80 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@media (max-width: 1125px) {
+  .tagline { 
+    visibility: hidden;
+  }
+}
+
+h1 {
+  font-family: Arial, Verdana, Sans-Serif;
+  color: #fff;
+}
+
+p {
+  text-align: center;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -3em;
+  /* Pad the bottom by footer height */
+  padding: 0 0 3em;
+}
+
+.navbar-default .navbar-brand {
+  color: red;
+  font-weight: bold;
+  letter-spacing: .025em;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: red;
+}
+
+.index-image { 
+  margin-top: -20px;
+  position: relative; 
+  width: 100%; /* for IE 6 */
+}
+
+.tagline { 
+  font-size: 4em;
+  font-weight: bold;
+  position: fixed; 
+  top: 400px; 
+  left: 0; 
+  width: 100%; 
+}
+
+h1 span { 
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px; 
+}
+
+span .spacer {
+  background: rgba(0, 0, 0, 0.0);
+  padding: 0 5px;
+}
+
+footer {
+    height: 3em;
+    background-color: #f5f5f5;
+}
+
+footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+footer > .container > p {
+  color: red;
+  line-height: 3em;
+}
+
