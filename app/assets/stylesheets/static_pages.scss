@@ -2,11 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-@media (max-width: 1125px) {
-  .tagline { 
-    visibility: hidden;
-  }
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
 }
 
 h1 {
@@ -18,20 +23,12 @@ p {
   text-align: center;
 }
 
-#wrap {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  /* Negative indent footer by its height */
-  margin: 0 auto -3em;
-  /* Pad the bottom by footer height */
-  padding: 0 0 3em;
-}
 
 .navbar-default .navbar-brand {
   color: red;
   font-weight: bold;
-  letter-spacing: .025em;
+  font-size: 1.5em;
+  letter-spacing: .015em;
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
@@ -44,23 +41,39 @@ p {
   width: 100%; /* for IE 6 */
 }
 
-.tagline { 
+.brandname { 
+  visibility: hidden;
   font-size: 4em;
   font-weight: bold;
   position: fixed; 
-  top: 400px; 
+  top: 6em; 
+  left: 0; 
+  width: 100%; 
+}
+
+.tagline { 
+  visibility: hidden;
+  font-size: 2.5em;
+  font-weight: bold;
+  position: fixed; 
+  top: 11em; 
+  left: 0; 
+  width: 100%; 
+}
+
+.alternate { 
+  font-size: 2em;
+  font-weight: bold;
+  position: fixed; 
+  top: 5em; 
   left: 0; 
   width: 100%; 
 }
 
 h1 span { 
   background: rgba(0, 0, 0, 0.7);
-  padding: 5px; 
-}
-
-span .spacer {
-  background: rgba(0, 0, 0, 0.0);
-  padding: 0 5px;
+  margin: 0;
+  padding: .15em; 
 }
 
 footer {
@@ -78,3 +91,27 @@ footer > .container > p {
   line-height: 3em;
 }
 
+@media (min-width: 1125px) {
+  .brandname { 
+    visibility: visible;
+  }
+}
+
+@media (min-width: 840px){
+  .tagline {
+    font-size: 4em;
+    top: 7.41em;
+  }
+}
+
+@media (min-width: 700px){
+  .alternate {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 700px) {
+  .tagline { 
+    visibility: visible;
+  }
+}
