@@ -1,0 +1,25 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h2 {
+	font-family: 'Droid-Sans', verdana, helvetica, sans-serif;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.row {
+	margin-top: 3em;
+	padding: auto 5em;
+}
+
+#product-box {
+	max-width: 40%;
+	border-style: solid;
+	border-radius: 1em;
+	border-width: 2px;
+	border-color: #000;
+	margin: 1em 3em;
+
+}
