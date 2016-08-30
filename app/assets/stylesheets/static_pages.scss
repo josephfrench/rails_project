@@ -19,14 +19,23 @@ body {
 }
 
 h1 {
-  font-family: Arial, Verdana, Sans-Serif;
-  color: #fff;
+  color: #000;
+  font-family: 'Droid-Sans', verdana, helvetica, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 .products-header {
+  color: #0d0d0d;
 }
 
 p {
   text-align: center;
 }
 
+.product-controller p {
+  text-align: left;
+}
 
 .navbar-default .navbar-brand {
   font-family: acme, arial, sans serif;

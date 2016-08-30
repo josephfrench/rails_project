@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-h2 {
+h3 {
 	font-family: 'Droid-Sans', verdana, helvetica, sans-serif;
 	margin: 0 auto;
 	text-align: center;
@@ -11,15 +11,22 @@ h2 {
 
 .row {
 	margin-top: 3em;
-	padding: auto 5em;
+	padding: 5em auto;
 }
 
-#product-box {
-	max-width: 40%;
+.product-box {
+	display: block;
+	margin: 1em auto;
+	width: 95%;
 	border-style: solid;
 	border-radius: 1em;
 	border-width: 2px;
 	border-color: #000;
-	margin: 1em 3em;
-
 }
+
+img {
+	margin: 0 auto;
+}
+
+
+
