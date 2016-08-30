@@ -19,17 +19,23 @@ body {
 }
 
 h1 {
+  color: #fff;
+  font-family: 'Droid-Sans', verdana, helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+.products-header {
   color: #000;
   font-family: 'Droid-Sans', verdana, helvetica, sans-serif;
   margin: 0 auto;
   text-align: center;
 }
 
-h1 .products-header {
-  color: #0d0d0d;
+h2 {
+  text-align: center;
 }
 
-p {
+.product-box {
   text-align: center;
 }
 
@@ -87,7 +93,7 @@ p {
 h1 span { 
   background: rgba(0, 0, 0, 0.7);
   margin: 0;
-  padding: .15em; 
+  padding: .1em; 
 }
 
 footer {
