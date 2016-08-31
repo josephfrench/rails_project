@@ -1,0 +1,15 @@
+<div class="container">
+	<h2>Featured Product Landing Page Example:</h2>
+	<div class="container products-container">
+	  <div class="row" id="products-row">
+      <div class="col-xs-12 col-md-4">
+        <div class="product-box">
+          <p><%= image_tag(@featured_product.image_url, class: "img-responsive") %></p>
+          <p><h3><%= @featured_product.name %></h3></p>
+          <p><%= @featured_product.description %></p>
+          <p><strong>$<%= @featured_product.price %></strong></p>
+        </div><!--end products-box-->
+      </div><!--end products-col-->
+	  </div>  <!--end products-row-->
+	</div><!--end products-container-->
+</div>
