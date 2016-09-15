@@ -1,15 +1,48 @@
 <div class="container">
 	<h2>Featured Product Landing Page Example:</h2>
-	<div class="container products-container">
-	  <div class="row" id="products-row">
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <% @products.each do |product| %>
+        <div class="item<%= " active" if product == @products.first %>">
+          <%= image_tag(product.image_url, class: "img-responsive") %>
+          <div class="carousel-caption">
+            <%= product.name %>
+          </div>
+        </div>  
+      <% end %>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+This stuff was from a previous lesson.  The code above is from the current lesson.
+  <div class="container products-container">
+    <div class="row" id="products-row">
       <div class="col-xs-12 col-md-4">
         <div class="product-box">
           <p><%= image_tag(@featured_product.image_url, class: "img-responsive") %></p>
           <p><h3><%= @featured_product.name %></h3></p>
           <p><%= @featured_product.description %></p>
           <p><strong>$<%= @featured_product.price %></strong></p>
-        </div><!--end products-box-->
-      </div><!--end products-col-->
-	  </div>  <!--end products-row-->
-	</div><!--end products-container-->
+        </div><!--end products-box>
+      </div><!--end products-col>
+    </div>  <!--end products-row>
+  </div><!-end products-container-->
 </div>
