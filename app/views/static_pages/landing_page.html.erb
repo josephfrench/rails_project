@@ -5,7 +5,7 @@
   <!-- Indicators -->
     <ol class="carousel-indicators">
       <% @products.each do |product| %>
-        <li data-target="#carousel-example-generic" data-slide-to="<%= @number %>" class="<%= "active" if product == @products.first %>">
+        <li data-target="#carousel-example-generic" data-slide-to="<%= @numbers %>" class="<%= "active" if product == @products.first %>">
       <% end %>
     </ol>
 
