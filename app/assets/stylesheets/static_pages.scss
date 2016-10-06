@@ -112,10 +112,9 @@ h4 span {
 }
 
 .carousel-inner {
-  color: red;
   font-size: 1.25em;
   font-weight: bold;
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 2px 2px 2px #ff0000;
   margin-bottom: 2em;
 }
 
@@ -124,7 +123,8 @@ h4 span {
 }
 
 .carousel-caption {
-  color: red;
+  margin-top: 3em;
+  color: #0d0d0d;
 }
 
 footer {
