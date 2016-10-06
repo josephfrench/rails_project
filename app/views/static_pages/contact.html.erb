@@ -1,7 +1,69 @@
-<div class="container">
-	<h1>Discover Local</h1>
-	<h2>Contact Us</h2>
-	<p>Call / Text:  719-238-0600</p>
-	<p>E-mail:  joe.p.french@gmail.com</p>
-	<p>Semiotics sriracha man bun lomo man braid truffaut, iPhone YOLO mlkshk small batch next level. Pour-over freegan occupy kale chips, irony dreamcatcher artisan fashion axe portland cornhole man bun master cleanse helvetica. Ennui everyday carry plaid, gluten-free scenester marfa gastropub meditation pork belly stumptown austin put a bird on it farm-to-table trust fund twee. Flannel whatever poutine, art party mlkshk tumblr chillwave beard craft beer. Single-origin coffee whatever hella flannel, chillwave celiac four dollar toast hashtag tofu echo park pickled everyday carry mustache 8-bit. Synth flexitarian dreamcatcher, keffiyeh kitsch sriracha fap cronut locavore +1 iPhone gentrify viral. Organic migas asymmetrical hoodie.</p>
+<div class="container" id="contact">
+  <h2>Contact</h2>
+  <div class="contact row">
+    <div class="col-md-6 col-xs-12">
+      <div class="map row">
+        <div class="col-xs-12">
+          <iframe
+            width="80%"
+            height="225px"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAFZ5s4yvmJimRF8Mtrtd4MZ2cuHMp42y4 
+            &q=filderstrasse,stuttgart+germany" allowfullscreen>
+          </iframe>
+        </div>
+        <div class="col-xs-12">  
+          <h4><span class="glyphicon glyphicon-envelope"></span>  joe.p.french@gmail.com</h4>
+        </div>  
+        <div class="col-xs-12"> 
+          <h4><span class="glyphicon glyphicon-phone-alt"></span>  +1.719.238.0600</h4>
+        </div>
+        <div class="col-xs-12">
+          <h4><span class="glyphicon glyphicon-home"></span>  21 Filderstrasse  Stuttgart, DE</h4>
+        </div>
+      </div>    
+    </div>
+    <!--form-->
+    <div class="col-md-6 col-xs-12">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="name" class="col-md-2 col-xs-12 control-label">Name</label>
+          <div class="col-md-4 col-xs-12">
+            <input placeholder="Your name" type="text" class="form-control" name="name" id="name" minlength="3">
+            <!--<p id="visible-name"></p>-->
+          </div>
+          <label for="phone" class="col-md-2 col-xs-12 control-label">Phone</label>
+          <div class="col-md-4 col-xs-12">
+            <input placeholder="Phone number" type="tel" class="form-control" name="phone" id="phone" minlength="10">
+            <!--<p id="visible-phone"></p>-->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="email" class="col-md-2 col xs-12 control-label">E-mail</label>
+          <div class="col-md-10 col-xs-12">
+            <input placeholder="Your e-mail address" type="email" class="form-control" name="email" id="email" required="required">
+            <!--<p id="visible-email"></p>-->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="message" class="col-md-2 col-xs-12 control-label">Message</label>
+          <div class="col-md-10 col-xs-12">
+            <textarea placeholder="How can I help you?" style="resize:none" cols="40" rows="5" class="form-control" name="message" id="message" required="required" minlength="20"></textarea>
+            <!--<div class="col-xs-12">
+              <p id="visible-comment"></p>
+              <br>
+              <p id="char-Count"></p>
+            </div>-->
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-offset-6 col-md-3 col-xs-12">
+            <button type="submit" class="btn btn-link" id="button">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>  
+  </div>    <!--end contact row--> 
+</div>  <!--end container contact-->
+
 </div>

@@ -4,11 +4,15 @@ Rails.application.routes.draw do
 
   get 'static_pages/contact'
 
+  get 'static_pages/featured'
+
   get 'static_controller/about'
 
   get 'static_controller/contact'
 
-  root 'static_pages#landing_page'
+  get 'static_controller/featured'
+
+  root 'static_pages#index'
 
   resources :orders, only: [:index, :show, :create, :destroy]
 

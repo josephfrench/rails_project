@@ -23,6 +23,10 @@ h1 {
   font-family: 'Droid-Sans', verdana, helvetica, sans-serif;
 }
 
+#contact h4 {
+  float: left;
+}
+
 .products-header {
   color: #000;
   font-family: 'Droid-Sans', verdana, helvetica, sans-serif;
@@ -94,16 +98,30 @@ h1 span {
   margin: 0;
   padding: .1em; 
 }
+
+h4 span {
+  margin-right: 1em;
+  margin-left: 3em;
+}
+
+.map {
+  margin-top: 0;
+}
  
 .carousel-indicators {
   bottom: -1.2em;
 }
 
 .carousel-inner {
+  color: red;
   font-size: 1.25em;
   font-weight: bold;
   text-shadow: 2px 2px 2px #000;
   margin-bottom: 2em;
+}
+
+.carousel-inner img {
+  width: 40%;
 }
 
 footer {
