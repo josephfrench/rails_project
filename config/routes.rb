@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get 'static_controller/featured'
 
-  root 'static_pages#index'
+  root 'products#index'
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
