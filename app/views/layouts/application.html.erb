@@ -32,6 +32,10 @@
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <%= form_tag("/products", method: "get", class: "navbar-form navbar-right", role: "search") do %>
+              <%= text_field_tag(:q, "", class: "form-control") %>
+              <%= submit_tag("Search", class: "btn btn-default") %>
+            <% end %>
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to 'Home', root_path %></li>
               <li><%= link_to "Featured Products", static_pages_featured_path %></li>
