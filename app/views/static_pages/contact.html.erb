@@ -25,43 +25,36 @@
     </div>
     <!--form-->
     <div class="col-md-6 col-xs-12">
-      <form class="form-horizontal">
-        <div class="form-group">
-          <label for="name" class="col-md-2 col-xs-12 control-label">Name</label>
-          <div class="col-md-4 col-xs-12">
-            <input placeholder="Your name" type="text" class="form-control" name="name" id="name" minlength="3">
-            <!--<p id="visible-name"></p>-->
-          </div>
-          <label for="phone" class="col-md-2 col-xs-12 control-label">Phone</label>
-          <div class="col-md-4 col-xs-12">
-            <input placeholder="Phone number" type="tel" class="form-control" name="phone" id="phone" minlength="10">
-            <!--<p id="visible-phone"></p>-->
+      <%= flash[:notice] %>
+      <%= form_tag("/static_pages/thank_you",  class: "form-horizontal") do %>
+        <div class="form-group row">
+          <div class="col-md-12 col-xs-12">  
+            <%= label_tag :name, "Name" %>
+            <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+          </div>         
+          <!--div class="col-md-6 col-xs-12">
+            <#%= label_tag :phone %>
+            <#%= text_field_tag :phone, nil, class: "form-control", placeholder: "Enter Phone" %>
+          </div-->
+        </div>
+        <div class="form-group row">
+          <div class="col-xs-12">
+            <%= label_tag :email, "Email Address" %>
+            <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
           </div>
         </div>
         <div class="form-group row">
-          <label for="email" class="col-md-2 col xs-12 control-label">E-mail</label>
-          <div class="col-md-10 col-xs-12">
-            <input placeholder="Your e-mail address" type="email" class="form-control" name="email" id="email" required="required">
-            <!--<p id="visible-email"></p>-->
+          <div class="col-xs-12">
+            <%= label_tag :message %>
+            <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
           </div>
         </div>
         <div class="form-group row">
-          <label for="message" class="col-md-2 col-xs-12 control-label">Message</label>
-          <div class="col-md-10 col-xs-12">
-            <textarea placeholder="How can I help you?" style="resize:none" cols="40" rows="5" class="form-control" name="message" id="message" required="required" minlength="20"></textarea>
-            <!--<div class="col-xs-12">
-              <p id="visible-comment"></p>
-              <br>
-              <p id="char-Count"></p>
-            </div>-->
+          <div class="col-md-4 offset-md-4 col-xs-12">
+            <%= submit_tag "Send" %>
           </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-md-offset-6 col-md-3 col-xs-12">
-            <button type="submit" class="btn btn-link" id="button">Submit</button>
-          </div>
-        </div>
-      </form>
+        </div>  
+      <% end %>
     </div>  
   </div>    <!--end contact row--> 
 </div>  <!--end container contact-->
