@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
  	  @numbers = Product.ids
   	#@featured_product = Product.last
   end
-  def contact
+  def thank_you
     @name = params[:name]
     @email = params[:email]
     @message = params[:message]
