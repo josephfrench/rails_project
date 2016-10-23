@@ -32,25 +32,34 @@
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <%= form_tag("/products", method: "get", class: "navbar-form navbar-right", role: "search") do %>
-              <%= text_field_tag(:q, "", class: "form-control") %>
-              <%= submit_tag("Search", class: "btn btn-default") %>
-            <% end %>
             <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to 'Home', root_path %></li>
               <li><%= link_to "Featured Products", static_pages_featured_path %></li>
+              <li>
+                <%= form_tag("/products", method: "get", class: "navbar-form", role: "search") do %>
+                  <%= text_field_tag(:q, "", class: "form-control") %>
+                  <%= submit_tag("Search", class: "btn btn-default") %>
+                <% end %>
+              </li>
+              <li><%= link_to 'Home', root_path %></li>
               <li><%= link_to "Products", products_path %></li>
               <li><%= link_to "About", static_pages_about_path %></li>
               <li><%= link_to "Contact", static_pages_contact_path %></li>
-            </ul>
+              <li id="login">
+                <% if user_signed_in? %>
+                    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                  <% else %>
+                    <%= link_to('Login', new_user_session_path) %>
+                <% end %>
+              </li> 
+            </ul>  
+            
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
-      
-        <%= yield %>
-       
-      </div><!--content-->
-    
+      <%= yield %>
+      <p class="notice"><%= notice %></p> 
+      <p class="alert"><%= alert %></p>    
+    </div><!--content-->
     <footer class="footer">
       <div class="container">
         <p>DiscoverLocal LLC &copy; 2016 </p>

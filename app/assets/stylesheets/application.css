@@ -17,3 +17,98 @@
 .navbar-form {
   vertical-align: middle;
 }
+
+#login > a {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.container-devise {
+  max-width: 30%;
+  margin: 0 auto;
+}
+
+.container-devise > .field.form-group {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+  height: 3em;
+}
+
+div.field.form-group {
+  margin-bottom: 0;
+}
+
+.field > label {
+  display: inline-block;
+  float: right;
+}
+
+.field > input {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: .6em;
+  font-size: 1.2em;
+  background-color: #fff;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+#error_explanation {
+  width: auto;
+}
+
+.field_with_errors {
+  display: block;
+}
+
+.field_with_errors > input {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: .6em;
+  font-size: 1.2em;
+  background-color: #fff;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkbox {
+  margin: .6em 0 0;
+}
+
+.checkbox > input#user_remember_me {
+  margin-left: 0;
+}
+
+.checkbox > label {
+  padding-left: 2em;
+}
+
+.actions > input {
+  display: block;
+  margin: .6em auto 0;
+  width: 100%;
+  background: #e7e7e7;
+  color: #777;
+  font-weight: bold;
+}
+
+.btn-default:hover {
+  color: #ff0000;
+}
+
+.container-devise > a:hover {
+  background-color: #fff;
+  color: #ff0000;
+  text-decoration: none;
+}
