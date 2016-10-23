@@ -5,7 +5,7 @@ class Product < ApplicationRecord
     comments.rating_desc.pluck(:body).first
   end
   def lowest_rating_comment
-    comments.rating_desc.pluck(:body).last
+    comments.rating_asc.pluck(:body).first
   end
 end
 
