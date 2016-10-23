@@ -61,6 +61,30 @@ input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
+.container-devise > .field.form-group.textarea {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+  height: 4.4em;
+}
+
+.field > textarea {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: .6em;
+  font-size: 1.2em;
+  background-color: #fff;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
 #error_explanation {
   width: auto;
 }
