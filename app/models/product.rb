@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
 	has_many :orders
   has_many :comments
+  validates :name, presence: true
   def highest_rating_comment
     comments.rating_desc.pluck(:body).first
   end
@@ -16,5 +17,6 @@ class Product < ApplicationRecord
   def average_rating
     comments.average(:rating).round(1)
   end
+  
 end
 

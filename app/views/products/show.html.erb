@@ -83,6 +83,8 @@
           <hr>
           <h4>All Reviews</h4>
           <%= render partial: "comments" %>
+          <%= will_paginate @comments %>
+
         </div><!--inner col-->  
       </div><!--col-->  
     </div><!--row-->
