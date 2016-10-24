@@ -21,7 +21,7 @@
             <% if @product.comments.count>0 %>
               <div class="rated p-rating" data-score="<%= @product.average_rating %>"></div>
             <% else %>
-              Not yet rated
+              <div class="p-rating">Not yet rated</div>
             <% end %>    
           <br>
           </div>         
