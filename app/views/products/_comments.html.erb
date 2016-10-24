@@ -1,5 +1,5 @@
 <div class="product-reviews">
-  <% @comments.order({ created_at: :desc }).each do |comment| %>
+  <% @comments.each do |comment| %>
     <div class="row">
       <hr>
       <p class="p-comment">
