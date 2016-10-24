@@ -28,6 +28,11 @@
   margin: 0 auto;
 }
 
+.container-comment {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 .container-devise > .field.form-group {
   text-align: center;
   width: 100%;
