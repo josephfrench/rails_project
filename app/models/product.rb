@@ -15,5 +15,6 @@ class Product < ApplicationRecord
   end   
   def average_rating
     comments.average(:rating).round(1)
+  end
 end
 
