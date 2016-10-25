@@ -28,18 +28,20 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">DiscoverLocal</a>
+            <%=link_to 'DiscoverLocal', root_path, class: 'navbar-brand' %>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "Featured Products", static_pages_featured_path %></li>
+            <ul class="nav navbar-nav navbar-left">
               <li>
                 <%= form_tag("/products", method: "get", class: "navbar-form", role: "search") do %>
                   <%= text_field_tag(:q, "", class: "form-control") %>
                   <%= submit_tag("Search", class: "btn btn-default") %>
                 <% end %>
               </li>
+              <li><%= link_to "Featured Products", static_pages_featured_path %></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
               <li><%= link_to 'Home', root_path %></li>
               <li><%= link_to "Products", products_path %></li>
               <li><%= link_to "About", static_pages_about_path %></li>
