@@ -156,26 +156,26 @@ footer > .container > p {
   text-align: center;
 }
 
-@media (min-width: 870px) {
+@media (min-width: 1172px) {
   .brandname { 
     visibility: visible;
   }
 }
 
-@media (min-width: 840px){
+@media (min-width: 1172px){
   .tagline {
     font-size: 4em;
     top: 7.41em;
   }
 }
 
-@media (min-width: 700px){
+@media (min-width: 735px){
   .alternate {
     visibility: hidden;
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 735px) {
   .tagline { 
     visibility: visible;
   }
