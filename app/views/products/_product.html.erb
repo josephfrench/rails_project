@@ -4,6 +4,8 @@
     <p><h3><%= link_to (product.name), product %></h3></p>
     <p><%= product.description %></p>
     <p><strong>$<%= product.price %></strong></p>
-    <p><%= link_to 'Show', product %> | <%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% if signed_in? && current_user.admin? %>
+      <p><%= link_to 'Show', product %> | <%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
   </div><!--end products-box-->
 </div><!--end products-col-->

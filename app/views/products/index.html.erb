@@ -6,11 +6,13 @@
   <div class="row" id="products-row">
     <%= render @products %> 
   </div>  <!--end products-row-->
-</div><!--end products-container-->
-
-
-<div class="container product-controller">
-  <p><%= link_to 'New Product', new_product_path %></p>
+  <div class="row">
+    <div class="col-xs-2 col-xs-offset-1">
+      <% if signed_in? && current_user.admin? %>
+      <p><%= link_to 'New Product', new_product_path  %></p>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 
