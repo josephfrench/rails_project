@@ -1,9 +1,13 @@
 require 'rails_helper'
 
 describe UsersController, :type => :controller do 
-  let(:user) { User.create!(email: 'user1@123.com', password: '123456') }
-  let(:user2) { User.create!(email: 'user2@123.com', password: '123456') }
-    
+  
+  #let(:user) { User.create!(email: 'user1@123.com', password: '123456') } #original
+  let(:user) { FactoryGirl.create(:user) }
+  #let(:user2) { User.create!(email: 'user2@123.com', password: '123456') } #original
+  #let(:user2) { FactoryGirl.create(:user, email: 'user2@123.com') } #iteration 2
+  let(:user2) { FactoryGirl.create(:user) }  #final implementation with sequence usage
+  
   describe "GET #show" do
     context 'User is logged in' do
       before do
