@@ -39,7 +39,9 @@
           </div>   
           <div class="col-xs-12">
             <p class="product-show">
-              <h4 class="product-show">BUY Placeholder</h4>
+              <%= form_tag "/payments/create" do %>
+                <%= render partial: "shared/stripe_checkout_button" %>
+              <% end %>
             </p>
           </div>            
         </div><!--inner col-->  
