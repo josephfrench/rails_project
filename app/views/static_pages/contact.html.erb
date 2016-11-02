@@ -27,8 +27,8 @@
     <div class="col-md-6 col-xs-12">
       <%= flash[:notice] %>
       <%= form_tag("/static_pages/thank_you",  class: "form-horizontal") do %>
-        <div class="form-group row">
-          <div class="col-md-12 col-xs-12">  
+        <div class="row" style="margin-top: 0;">
+          <div class="form-group col-xs-12">
             <%= label_tag :name, "Name" %>
             <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
           </div>         
@@ -36,26 +36,20 @@
             <#%= label_tag :phone %>
             <#%= text_field_tag :phone, nil, class: "form-control", placeholder: "Enter Phone" %>
           </div-->
-        </div>
-        <div class="form-group row">
-          <div class="col-xs-12">
+          <div class="form-group col-xs-12">
             <%= label_tag :email, "Email Address" %>
             <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
           </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-xs-12">
+          <div class="form-group col-xs-12">
             <%= label_tag :message %>
             <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
           </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-md-4 offset-md-4 col-xs-12">
-            <%= submit_tag "Send" %>
+          <div class="form-group col-md-2 offset-md-5 col-xs-12">
+            <%= submit_tag "Send", class: "btn btn-primary" %>
           </div>
-        </div>  
+        </div>  <!--end inner row--> 
       <% end %>
-    </div>  
+    </div>  <!--end right column--> 
   </div>    <!--end contact row--> 
 </div>  <!--end container contact-->
 
