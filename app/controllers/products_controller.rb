@@ -33,10 +33,12 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    logger.debug "Creating a new product"
     @product = Product.new(product_params)
 
     respond_to do |format|
       if @product.save
+        logger.debug "The new product - #{@product.name} has been saved successfully."
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
@@ -51,6 +53,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
+        byebug
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else
