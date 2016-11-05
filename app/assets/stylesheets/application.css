@@ -40,10 +40,6 @@
   height: 3em;
 }
 
-div.field.form-group {
-  margin-bottom: 0;
-}
-
 .field > label {
   display: inline-block;
   float: right;
