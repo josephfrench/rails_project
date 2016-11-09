@@ -1,0 +1,18 @@
+<div class="product-reviews">
+  <div class="row">
+    <hr>
+    <p class="p-comment">
+      <%= comment.user.first_name %> 
+      <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small> 
+      <% if can? :delete, @comment %>
+        <%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product_comment_path(comment.product, comment), method: :delete, data: { confirm: "Are you sure?" } %>
+      <% end %>
+    </p>
+    <p class="p-comment">
+      <div class="rated p-comment" data-score="<%= comment.rating %>"></div>
+    </p>
+    <p class="p-comment">
+      <%= comment.body %>
+    </p>
+  </div>
+</div>
