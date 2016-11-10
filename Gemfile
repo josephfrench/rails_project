@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
+gem 'dalli'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do

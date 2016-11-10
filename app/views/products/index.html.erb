@@ -4,7 +4,9 @@
 
 <div class="container products-container">
   <div class="row" id="products-row">
-    <%= render @products %> 
+    <% cache(cache_key_for_products) do %>
+      <%= render @products %>
+    <% end %> 
   </div>  <!--end products-row-->
   <div class="row">
     <div class="col-xs-2 col-xs-offset-1">

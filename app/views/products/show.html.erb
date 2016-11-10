@@ -1,12 +1,12 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
   <p class="product-show"><h2>Business Solutions</h2></p>
-
   <div class="product-box">
     <div class="row">
       <div class="col-xs-12">
         <p>
-          <h3><strong><%= @product.name %></strong></h3>
+          <% cache @product do %>
+            <h3><strong><%= @product.name %></strong></h3>
         </p>
       </div>
       <div class="col-md-6 col-xs-12" id="image-div">
@@ -22,7 +22,7 @@
               <div class="rated p-rating" id="average-rating" data-score="<%= @product.average_rating %>"></div>
             <% else %>
               <div class="p-rating">Not yet rated</div>
-            <% end %>    
+            <% end %> 
           <br>
           </div>         
           <div class="col-xs-12">
@@ -87,17 +87,19 @@
           <h4>All Reviews</h4>
           <%= render partial: "comments", locals: {comments: @product.comments }  %>
           <%= will_paginate @comments %>
-
+        <% end %><!--end cache--> 
         </div><!--inner col-->  
       </div><!--col-->  
     </div><!--row-->
   </div><!--box-->
   <div class="row">
     <div class="col-xs-2 col-xs-offset-1">
-      <% if signed_in? && current_user.admin? %>
-        <%= link_to 'Edit', edit_product_path(@product) %> |
-      <% end %>
-      <%= link_to 'Back', products_path %>
+      <% cache do %>
+        <% if signed_in? && current_user.admin? %>
+          <%= link_to 'Edit', edit_product_path(@product) %> |
+        <% end %>
+        <%= link_to 'Back', products_path %>
+      <% end %>   
     </div>
   </div>
 </div>
