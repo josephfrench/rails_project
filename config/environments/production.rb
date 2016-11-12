@@ -108,7 +108,7 @@ Rails.application.configure do
   }
 
   config.web_socket_server_url = "wss://discoverlocal.herokuapp.com/cable"
-config.action_cable.allowed_request_origins = ['https://discoverlocal.herokuapp.com', 'http://discoverlocal.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://discoverlocal.herokuapp.com', 'http://discoverlocal.herokuapp.com']
 
 end
 
