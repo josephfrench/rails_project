@@ -107,5 +107,8 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
+  config.web_socket_server_url = "wss://discoverlocal.herokuapp.com/cable"
+config.action_cable.allowed_request_origins = ['https://discoverlocal.herokuapp.com', 'http://discoverlocal.herokuapp.com']
+
 end
 

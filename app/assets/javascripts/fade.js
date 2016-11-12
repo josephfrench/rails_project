@@ -1,1 +1,1 @@
-$(".alert").hide("slow");
+//$(".alert.alert-info").hide("slow");
