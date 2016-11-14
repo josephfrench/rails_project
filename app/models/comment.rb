@@ -9,4 +9,6 @@ class Comment < ApplicationRecord
   scope :rating_asc, -> { order(rating: :asc)}
   self.per_page = 5
 
+  after_create_commit { CommentUpdateJob.perform_later(self, @user) }
+
 end
